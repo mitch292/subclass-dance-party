@@ -3,7 +3,7 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-color:#FFFFFF;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -21,7 +21,53 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
+  border:10px solid blue;
   border-radius:10px;
   position:absolute;
+}
+#blinky {
+  border:20px solid rgb(192, 77, 31);
+  border-radius:10px;
+  position:absolute;
+}
+
+#strobe {
+  border:100px solid;
+  border-radius:10px;
+  position:absolute;
+  animation-duration: 5s;
+  animation-name: strobe;
+  animation-iteration-count: infinite;
+}
+
+@keyframes strobe {
+  0% {
+    border-color: rgb(100, 50, 180)
+  }
+  50% {
+    border-color: rgb(1, 40, 40)
+  }
+  100% {
+    border-color: rgb(180, 180, 40)
+  }
+}
+
+#snake {
+  border:20px solid rgb(40, 240, 31);
+  border-radius:10px;
+  position:absolute;
+  animation-duration: 10s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+  to {
+    margin-left: 0%;
+    width: 100%
+  }
 }
