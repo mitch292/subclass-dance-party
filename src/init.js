@@ -25,11 +25,25 @@ $(document).ready(function() {
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
-      Math.random() * 1000
+      Math.random() * 5000
     );
 
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
 
   });
+  $('.lineUp').on('click', function(event) {
+    window.dancers.forEach(function(dancer) {
+      dancer.lineUp();
+
+    });
+
+  });
+
+  $('.dancer').mouseover(function() {
+  console.log('mouseing over')
+  });
+
+
 });
 
