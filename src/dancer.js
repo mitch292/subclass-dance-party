@@ -35,15 +35,27 @@ Dancer.prototype.lineUp = function() {
 
 Dancer.prototype.sizeUp = function() {
   var styleSettings = {
-    'width': '200px',
-    'height': '200px'
+    transform: 'scale(2.5)'
   }
   this.$node.css(styleSettings);
 }
 Dancer.prototype.sizeDown = function() {
   var styleSettings = {
-    'width': '50px',
-    'height': '50px'
+    transform: 'scale(1.0)'
+  }
+  this.$node.css(styleSettings);
+}
+
+Dancer.prototype.moveLeft = function() {
+  var styleSettings = {
+    'left': '10px'
+  }
+  this.$node.css(styleSettings);
+}
+
+Dancer.prototype.moveRight = function() {
+  var styleSettings = {
+    'left': '1750px'
   }
   this.$node.css(styleSettings);
 }

@@ -32,25 +32,42 @@ $(document).ready(function() {
     window.dancers.push(dancer);
 
     $('.dancer').on('mouseover', function(event) {
-      console.log('html element top and left', this)
-      console.log('dancers span', window.dancers[0].$node[0]);
-      console.log(window.dancers[0].$node[0] === this)
+      // console.log('html element top and left', this)
+      // console.log('dancers span', window.dancers[0].$node[0]);
+      // console.log(window.dancers[0].$node[0] === this)
 
       for (var i = 0; i < window.dancers.length; i++) {
         if (window.dancers[i].$node[0]  === this) {
+          // console.log(window.dancers[i]);
+          // console.log(window.dancers[i].$node[0].x);
+          // console.log(window.dancers[i].$node[0].y);
           window.dancers[i].sizeUp();
         }
       }
     });
 
     $('.dancer').on('mouseout', function(event) {
-      console.log('html element top and left', this)
-      console.log('dancers span', window.dancers[0].$node[0]);
-      console.log(window.dancers[0].$node[0] === this)
+      // console.log('html element top and left', this)
+      // console.log('dancers span', window.dancers[0].$node[0]);
+      // console.log(window.dancers[0].$node[0] === this)
 
       for (var i = 0; i < window.dancers.length; i++) {
         if (window.dancers[i].$node[0]  === this) {
           window.dancers[i].sizeDown();
+        }
+      }
+    });
+
+    $('.dancer').on('click', function(event) {
+      // console.log('html element top and left', this)
+      // console.log('dancers span', window.dancers[0].$node[0]);
+      // console.log(window.dancers[0].$node[0] === this)
+      console.log('click')
+      for (var i = 0; i < window.dancers.length; i++) {
+        if (window.dancers[i].$node[0].x < 800) {
+          window.dancers[i].moveLeft();
+        } else {
+          window.dancers[i].moveRight();
         }
       }
     });
