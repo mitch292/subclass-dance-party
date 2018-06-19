@@ -18,3 +18,16 @@ SnakeDancer.prototype.step = function() {
   // other effects you can use on a jQuery-wrapped html tag.
   this.$node;
 };
+
+
+// class SnakeDancer extends Dancer {
+//   constructor(top, left, timeBetweenSteps) {
+//     super();
+//     this.$node = $('<span id="snake" class="dancer"></span>');
+//     this.setPosition(top, left);
+//   }
+//   step() {
+//     super.step()
+//     this.$node;
+//   }
+// };

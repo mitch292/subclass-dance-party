@@ -18,3 +18,15 @@ BlinkyDancer.prototype.step = function() {
   // other effects you can use on a jQuery-wrapped html tag.
   this.$node;
 };
+
+// class BlinkyDancer extends Dancer {
+//   constructor(top, left, timeBetweenSteps) {
+//     super();
+//     this.$node = $('<img src="img/ball.png" id="blinky" class="dancer"></img>');
+//     this.setPosition(top, left);
+//   }
+//   step() {
+//     super.step()
+//     this.$node;
+//   }
+// };

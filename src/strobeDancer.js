@@ -2,7 +2,7 @@ var StrobeDancer = function(top, left, timeBetweenSteps) {
   Dancer.apply(this, arguments);
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
-  //this.$node =this.$node = $('<span class="makeBlinkyDancer"></span>');
+  //this.$node =this.$node = $('<span class="makeStrobeDancer"></span>');
   this.$node = $('<span id="strobe" class="dancer"></span>');
   this.setPosition(top, left);
 };
@@ -18,3 +18,16 @@ StrobeDancer.prototype.step = function() {
   // other effects you can use on a jQuery-wrapped html tag.
   this.$node;
 };
+
+
+// class StrobeDancer extends Dancer {
+//   constructor(top, left, timeBetweenSteps) {
+//     super();
+//     this.$node = $('<span id="strobe" class="dancer"></span>');
+//     this.setPosition(top, left);
+//   }
+//   step() {
+//     super.step()
+//     this.$node;
+//   }
+// };

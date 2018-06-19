@@ -1,3 +1,54 @@
+// // Creates and returns a new dancer object that can step
+// class Dancer {
+//   constructor (top, left, timeBetweenSteps) {
+//     this.timeBetweenSteps = timeBetweenSteps;
+//     this.$node = $('<span class="dancer"></span>');
+//     this.step();
+//     this.setPosition(top, left);
+//   }
+//   step() {
+//     setTimeout(this.step.bind(this), this.timeBetweenSteps);
+//   }
+//   setPosition(top, left) {
+//     var styleSettings = {
+//       top: top,
+//       left: left
+//     };
+//     this.$node.css(styleSettings);
+//   }
+//   lineUp() {
+//     var styleSettings = {
+//       top: top,
+//       left: 0
+//     };
+//     this.$node.css(styleSettings);
+//   }
+//   sizeUp(){
+//     var styleSettings = {
+//       transform: 'scale(2.5)'
+//     }
+//     this.$node.css(styleSettings);
+//   }
+//   sizeDown() {
+//     var styleSettings = {
+//       transform: 'scale(1.0)'
+//     }
+//     this.$node.css(styleSettings);
+//   }
+//   moveLeft() {
+//     var styleSettings = {
+//       'left': '10px'
+//     }
+//     this.$node.css(styleSettings);
+//   }
+//   moveRight() {
+//     var styleSettings = {
+//       'left': '1750px'
+//     }
+//     this.$node.css(styleSettings);
+//   }
+
+// };
 // Creates and returns a new dancer object that can step
 var Dancer = function(top, left, timeBetweenSteps) {
   this.timeBetweenSteps = timeBetweenSteps;
