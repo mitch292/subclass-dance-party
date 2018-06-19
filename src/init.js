@@ -31,18 +31,39 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
 
-  });
-  $('.lineUp').on('click', function(event) {
-    window.dancers.forEach(function(dancer) {
-      dancer.lineUp();
+    $('.dancer').on('mouseover', function(event) {
+      console.log('html element top and left', this)
+      console.log('dancers span', window.dancers[0].$node[0]);
+      console.log(window.dancers[0].$node[0] === this)
 
+      for (var i = 0; i < window.dancers.length; i++) {
+        if (window.dancers[i].$node[0]  === this) {
+          window.dancers[i].sizeUp();
+        }
+      }
+    });
+
+    $('.dancer').on('mouseout', function(event) {
+      console.log('html element top and left', this)
+      console.log('dancers span', window.dancers[0].$node[0]);
+      console.log(window.dancers[0].$node[0] === this)
+
+      for (var i = 0; i < window.dancers.length; i++) {
+        if (window.dancers[i].$node[0]  === this) {
+          window.dancers[i].sizeDown();
+        }
+      }
     });
 
   });
 
-  $('.dancer').mouseover(function() {
-  console.log('mouseing over')
+  $('.lineUp').on('click', function(event) {
+    window.dancers.forEach(function(dancer) {
+      dancer.lineUp();
+    });
+
   });
+
 
 
 });

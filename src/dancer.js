@@ -32,3 +32,18 @@ Dancer.prototype.lineUp = function() {
   };
   this.$node.css(styleSettings);
 }
+
+Dancer.prototype.sizeUp = function() {
+  var styleSettings = {
+    'width': '200px',
+    'height': '200px'
+  }
+  this.$node.css(styleSettings);
+}
+Dancer.prototype.sizeDown = function() {
+  var styleSettings = {
+    'width': '50px',
+    'height': '50px'
+  }
+  this.$node.css(styleSettings);
+}
